@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+
+            position: relative;
+        }
+        .rotate{
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+            ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+            -moz-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+            position: relative;
+            bottom: -10px;
+            right: 42px;
+
+        }
+        #container{
+            width: 300px;
+            height: 420px;
+            background: #f8f9ff;
+            border-radius: 15px;
+        }
+        #border{
+            width: 270px;
+            height: 390px;
+            margin: 15px 15px;
+            background: white;
+            border: solid 1px black;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #left-num,#right-num{
+            font-size: 40px;
+            width: 43px;
+            line-height: 35px;
+            padding: 10px;
+        }
+       #left-content,#right-content,#center-content{
+           width: 90px;
+           line-height: 90px;
+           padding: 5px;
+           font-size: 90px;
+       }
+       #left-content{
+           position: absolute;
+           top: 0;
+           left: 30px;
+       }
+       #right-content{
+           position: absolute;
+           top: 0;
+           left: 170px;
+       }
+        #center-content{
+            position: absolute;
+            top: 130px;
+            left: 100px;
+        }
+        #right-num{
+            position: absolute;
+            top: 290px;
+            left: 250px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container"></div>
+    <div id="border">
+        <div id="left">
+            <div id="left-num">
+                9
+                &#9824
+            </div>
+            <div id="left-content">
+                &#9824
+                &#9824
+                <div class="rotate">
+                     &#9824
+                     &#9824
+                </div>
+                <!--比较奇怪，不分段会默认成一体。。。-->
+            </div>
+        </div>
+        <div id="right">
+            <div id="right-num">
+                <div class="rotate">&#9824</div>
+                <div class="rotate">9</div>
+            </div>
+            <div id="right-content">
+                &#9824
+                &#9824
+                <div class="rotate">
+                    &#9824
+                    &#9824
+                </div>
+            </div>
+        </div>
+        <div id="center">
+            <div id="center-content">
+                &#9824
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
